@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+#bkimage {
+    position: relative;
+    padding-top: 0;
+    margin-bottom: 0.5rem;
+}
+#bkimage .slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#bkimage .slides:not(:first-child) {
+    display: none;
+}
+
+#bkimage h1 {
+    padding-top: 500px;
+    padding-bottom: 50px;
+}
+   
