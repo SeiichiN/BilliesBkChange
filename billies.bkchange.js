@@ -46,8 +46,6 @@
 			speed: 3000,
 			times: 5000
 		}, options);
-//        var speed = 3000;
-//        var times = 5000;
 
         var target = this;
         
