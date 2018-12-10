@@ -40,10 +40,14 @@
      * @param: bgArray <Array> 
      *
      */
-    $.fn.bgchanger = function(bgArray) {
+    $.fn.bgchanger = function(bgArray, options) {
 
-        var speed = 3000;
-        var times = 5000;
+		options = $.extend({
+			speed: 3000,
+			times: 5000
+		}, options);
+//        var speed = 3000;
+//        var times = 5000;
 
         var target = this;
         
@@ -54,14 +58,14 @@
         var bgNo = 1;
         var bgLength = bgArray.length;
         setInterval(function() {
-            $(target).children('.slides:nth-child(' + bgNo + ')').fadeOut(speed);
-            $(target).children('.slides:nth-child(' + (bgNo === bgLength ? 1 : bgNo + 1) + ')').fadeIn(speed/3);
+            $(target).children('.slides:nth-child(' + bgNo + ')').fadeOut(options.speed);
+            $(target).children('.slides:nth-child(' + (bgNo === bgLength ? 1 : bgNo + 1) + ')').fadeIn(options.speed/3);
             if (bgNo >= bgLength) {
                 bgNo = 1;
             } else {
                 bgNo += 1;
             }
-        }, times);
+        }, options.times);
 
         return this;
     };
