@@ -9,7 +9,13 @@
 		<header id="bkimage">
 			<h1>背景をフェードで切り替える</h1>
 		</header>
-		<p>まだ、オプション指定とかはできません。</p>
+		<p>フェードのスピードと背景切替の時間はオプションで指定できます。</p>
+        <p>画像は、配列で指定。</p>
+        <p>例） var images = ['img01.jpg', 'img02.jpg', 'img03.jpg']; </p>
+        <p>オプションは、{キー：値}の形式で指定。</p>
+        <p>例） var options = {speed: 3000, times: 5000};</p>
+        <p>これを、以下のようにして、渡す。<br>
+            jQuery('#haikei').bgchanger(images, options);</p>
 		<footer>
 			<small>&copy; 2018 Seiichi Nukayama</small>
 		</footer>
