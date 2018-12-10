@@ -22,5 +22,7 @@
 #bkimage h1 {
     padding-top: 500px;
     padding-bottom: 50px;
+    color: #fff;
+    text-shadow: 1px 1px #333;
 }
    

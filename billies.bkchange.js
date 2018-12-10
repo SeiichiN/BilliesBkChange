@@ -42,10 +42,12 @@
      */
     $.fn.bgchanger = function(bgArray, options) {
 
-		options = $.extend({
+        var defaultOptions = {
 			speed: 3000,
 			times: 5000
-		}, options);
+        };
+        
+		options = $.extend(defaultOptions, options);
 
         var target = this;
         
